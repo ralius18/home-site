@@ -4,20 +4,91 @@
 
   --light: rgb(255, 255, 255);
   --dark: rgb(18, 18, 18);
+  --darkish: rgb(50, 50, 50);
   --dark-text: rgb(189, 189, 189);
+  --darkish-text: rgb(221, 221, 221);
 }
 
 body {
   font-family:Arial, Helvetica, sans-serif;
-  max-width: 65rem;
-  margin: 0 auto;
+  /* max-width: 65rem;
+  margin: 0 auto; */
   padding: 5rem;
+  transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-div.content {
-  /* padding-left: 2.5rem;
-  padding-right: 2.5rem; */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--darkish);
+  overflow: auto;
+  text-align: right;
+}
+
+.sidenav a {
+  padding: 1rem 2rem 1rem 2rem;
+  text-decoration: none;
+  font-size: larger;
+  display: block;
+  color: var(--darkish-text);
+}
+
+.sidenav .nav-links a:hover {
+  color: var(--red);
+  background-color: var(--dark);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+/* Push to bottom of parent div */
+div.nav-ext {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  display: flex;
+}
+
+div.nav-ext a {
+  padding: 0.5rem;
+}
+
+div.main {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100%;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidenav a {
+    float: left;
+  }
+  div.main {
+    margin-left: 0;
+  }
+  .sidenav .nav-ext {
+    display: none;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+  }
 }
 
 .btn-primary {
@@ -42,6 +113,7 @@ div.content {
 }
 
 .dark-mode {
+  transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   background-color: var(--dark);
   color: var(--dark-text);
@@ -67,14 +139,18 @@ table.details td {
   text-align: right;
 }
 
-table.skills, table.skills td {
-  border: 1px solid;
+table.skills {
   border-collapse: collapse;
+  border-style: hidden;
+  margin: auto;
+}
+
+table.skills td, table.skills th {
+  border: 1px solid;
   padding: 0.5rem;
-  border-right: 0px;
-  border-left: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  border-top: 0px;
+  border-bottom: 0px;
+  vertical-align: top;
 }
 
 tr.split td {
