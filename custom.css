@@ -1,0 +1,86 @@
+:root {
+  --red: rgb(170, 0, 0);
+  --red-darker: rgb(110, 0, 0);
+
+  --light: rgb(255, 255, 255);
+  --dark: rgb(18, 18, 18);
+  --dark-text: rgb(189, 189, 189);
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+div.content {
+  /* padding-left: 2.5rem;
+  padding-right: 2.5rem; */
+}
+
+.btn-primary {
+  background-color: var(--red);
+  border-color: var(--red-darker);
+  /* -webkit-transition: all 0.1s ease-in-out; */
+}
+
+.btn-primary:hover {
+  background-color: var(--red-darker);
+  border-color: var(--red);
+}
+
+.btn-primary:focus {
+  background-color: var(--red-darker);
+  border-color: var(--red);
+}
+
+.btn-primary:active {
+  background-color: var(--red);
+  border-color: var(--red-darker);
+}
+
+.dark-mode {
+  -webkit-transition: all 0.5s ease-in-out;
+  background-color: var(--dark);
+  color: var(--dark-text);
+}
+
+a {
+  color: var(--red)
+}
+
+hr {
+  background-color: var(--red);
+}
+
+table.header td {
+  width: 100%;
+}
+
+table.details td {
+  width: 100%;
+}
+
+.right {
+  text-align: right;
+}
+
+table.skills, table.skills td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.5rem;
+  border-right: 0px;
+  border-left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr.split td {
+  border-top: 2px solid;
+}
+
+.dark-btn {
+  display: inline-block;
+}
