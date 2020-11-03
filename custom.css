@@ -22,6 +22,7 @@ body {
   height: 100%;
   width: 200px;
   padding: 0;
+  padding-top: 1rem;
   margin: 0;
   position: fixed;
   z-index: 1;
@@ -32,6 +33,10 @@ body {
   text-align: right;
 }
 
+.sidenav btn {
+  text-align: center;
+}
+
 .sidenav a {
   padding: 1rem 2rem 1rem 2rem;
   text-decoration: none;
@@ -40,9 +45,12 @@ body {
   color: var(--darkish-text);
 }
 
+.sidenav a.active {
+  background-color: var(--red);
+}
+
 .sidenav .nav-links a:hover {
-  color: var(--red);
-  background-color: var(--dark);
+  background-color: var(--red);
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
 }
@@ -108,8 +116,8 @@ div.main {
 }
 
 .btn-primary:active {
-  background-color: var(--red);
-  border-color: var(--red-darker);
+  background-color: var(--red) !important;
+  border-color: var(--red-darker) !important;
 }
 
 .dark-mode {
