@@ -10,11 +10,11 @@
   <script src="resources/main.js"></script>
 </head>
 
-<body class="dark-mode" onload="checkDarkCookie()">
+<body class="dark-mode" onload="artPageLoad()">
 
   <div class="sidenav">
     <div class="dark-div">
-      <btn class="btn btn-primary dark-btn" onclick="toggleDark()">
+      <btn class="btn btn-primary dark-btn" onclick="toggleDark(true)">
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -23,7 +23,7 @@
       </btn>
     </div>
     <div class="nav-links">
-      <a href="/about.html">About</a>
+      <!-- <a href="/about.html">About</a> -->
       <a href="/cv.html">CV</a>
       <a href="/music.html">Music</a>
       <a class="active" href="/art.html">Art</a>
@@ -56,7 +56,76 @@
       </a>
     </div>
   </div>
-
+<div id="modal">
+  <span id="span-close">&times;</span>
+  <img id="modal-img">
+  <div id="caption-text"></div>
+</div>
   <div class="main">
+
+    <h1>Art</h1>
+    <br>
+    <table class="art-table">
+      <tr>
+        <td>
+          <img class='art-img' src="resources/art/A Gentle Touch.jpg" id="gentle"><br>
+          A Gentle Touch<br>
+          <span class="art-size">12 x 16</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/A Pleasant Surprise.jpg" id="surprise"><br>
+          A Pleasant Surprise<br>
+          <span class="art-size">16 x 20</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/Burning Up.jpg" id="burning"><br>
+          Burning Up<br>
+          <span class="art-size">11 x 14</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img class='art-img' src="resources/art/Come Dance With Me.jpg" id="dance"><br>
+          Come Dance With Me<br>
+          <span class="art-size">16 x 20</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/Fade Into Focus.jpg" id="fade"><br>
+          Fade Into Focus<br>
+          <span class="art-size">10 x 10</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/Go With The Flow.jpg" id="flow"><br>
+          Go With The Flow<br>
+          <span class="art-size">10 x 10</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img class='art-img' src="resources/art/Here We Go Again.jpg" id="again"><br>
+          Here We Go Again<br>
+          <span class="art-size">16 x 20</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/I See.jpg" id="i-see"><br>
+          I See<br>
+          <span class="art-size">9 x 12</span>
+        </td>
+        <td>
+          <img class='art-img' src="resources/art/Sail Away.jpg" id="sail-away"><br>
+          Sail Away<br>
+          <span class="art-size">6 x 12</span>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <img class='art-img' src="resources/art/Why Not.jpg" id="why-not"><br>
+          Why Not?<br>
+          <span class="art-size">12 x 12</span>
+        </td>
+        <td></td>
+      </tr>
+    </table>
   </div>
 </body>
